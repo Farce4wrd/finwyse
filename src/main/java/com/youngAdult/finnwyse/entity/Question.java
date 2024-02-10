@@ -15,12 +15,15 @@ public class Question {
     private String correctAnswer;
     private String metaData;
 
-    public Question(String id, String name, List<String> options, String correctAnswer, String metaData ){
-        this.id = id;
+    private String category;
+
+    public Question( String name, List<String> options, String correctAnswer, String metaData, String category ){
+        super();
         this.name = name;
         this.options = options;
         this.correctAnswer = correctAnswer;
         this.metaData = metaData;
+        this.category = category;
     }
 
 }
