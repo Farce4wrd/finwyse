@@ -73,15 +73,16 @@ public class Question {
         this.category = category;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Question{" +
-//                "id='" + id + '\'' +
-//                ", name='" + name + '\'' +
-//                ", options=" + options +
-//                ", correctAnswer='" + correctAnswer + '\'' +
-//                ", metaData='" + metaData + '\'' +
-//                ", category='" + category + '\'' +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", options=" + options +
+                ", correctAnswer='" + correctAnswer + '\'' +
+                ", metaData='" + metaData + '\'' +
+                ", category='" + category + '\'' +
+                '}';
+    }
+
 }

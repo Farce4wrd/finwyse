@@ -6,7 +6,9 @@ const Layout = () =>{
 
     return (
         <div>
-            <headers></headers>
+            <headers>
+                Hello
+            </headers>
         </div>
     );
 }

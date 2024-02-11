@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/questions")
 public class QuestionController {
 
