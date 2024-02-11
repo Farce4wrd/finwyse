@@ -33,4 +33,14 @@ public class QuestionService {
     }
 
 
+    public void update(String id, Question question) {
+        Question q = questionRepo.findById(id).get();
+        q.setName(question.getName());
+        q.setCategory(question.getCategory());
+        q.setOptions(question.getOptions());
+        q.setCorrectAnswer(question.getCorrectAnswer());
+        q.setMetaData(question.getMetaData());
+        questionRepo.save(q);
+
+    }
 }
