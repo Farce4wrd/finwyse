@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/questions")
 public class QuestionController {
 
@@ -31,8 +32,8 @@ public class QuestionController {
     }
 
     @PutMapping("/{id}")
-    public void updateQuestion(@PathVariable String id){
-        //this.questionService.updateQuestion();
+    public void updateQuestion(@PathVariable String id, @RequestBody Question question){
+        questionService.update(id, question);
     }
 
 
