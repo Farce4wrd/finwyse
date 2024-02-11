@@ -5,27 +5,41 @@ import com.youngAdult.finnwyse.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/questions")
 public class QuestionController {
 
+    @Autowired
     private QuestionService questionService;
 
-    @Autowired
-    public QuestionController(QuestionService quest){
-        this.questionService = quest;
+
+
+    public QuestionController() {
     }
 
     @GetMapping("/all")
     public List<Question> getQuestions(){
-        return this.questionService.getAllQuestions();
+        return questionService.getAllQuestions();
     }
+
+    @GetMapping("/{category}")
+    public List<Question> getQuestionsByCategory(@PathVariable String category){
+        return questionService.getByCategory(category);
+    }
+
+    @PutMapping("/{id}")
+    public void updateQuestion(@PathVariable String id){
+        //this.questionService.updateQuestion();
+    }
+
+
 
     @PostMapping("")
     public void addQuestion(@RequestBody Question question){
-        this.questionService.add(question);
+        questionService.add(question);
     }
 
 }

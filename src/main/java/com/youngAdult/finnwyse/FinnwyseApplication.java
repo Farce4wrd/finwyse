@@ -12,17 +12,11 @@ import java.util.Arrays;
 
 @SpringBootApplication
 @EnableMongoRepositories
-public class FinnwyseApplication implements CommandLineRunner {
+public class FinnwyseApplication{
 
-	@Autowired
-	QuestionRepo questionRepo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(FinnwyseApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-
-	}
 }
